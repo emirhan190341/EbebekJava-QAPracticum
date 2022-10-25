@@ -7,10 +7,7 @@ public class Employee {
     int hireYear;
 
     public Employee(String name, int salary, int workHours, int hireYear) throws NameException {
-        NameException.CustomPart.Validate(name);
-        if (salary <= 0 || hireYear < 0 || workHours <= 0 || !name.matches("[A-Za-z]")) {
-
-        }
+        NameException.CustomPart.Validate(name,salary,workHours,hireYear);
 
         this.name = name;
         this.salary = salary;

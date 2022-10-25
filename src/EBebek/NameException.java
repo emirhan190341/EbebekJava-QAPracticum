@@ -7,8 +7,9 @@ public class NameException extends Exception {
     }
 
 
+
     public static class CustomPart {
-        static void Validate(String name) throws NameException {
+        static void Validate(String name,int salary,int workHours,int hireYear) throws NameException {
 
             String[] splitName = name.split("");
             for (String w : splitName) {
@@ -22,6 +23,19 @@ public class NameException extends Exception {
 
                 }
             }
+        if(salary < 0){
+            System.out.println("Lütfen pozitif bir değer giriniz.");
+            throw new NameException("Girdiginiz değer uygun degildir.");
+        }
+        if(workHours < 0){
+            System.out.println("Lütfen pozitif bir değer giriniz.");
+            throw new NameException("Girdiginiz değer uygun degildir.");
+        }
+        if(hireYear < 0){
+            System.out.println("Lütfen pozitif bir değer giriniz.");
+            throw new NameException("Girdiginiz değer uygun degildir.");
+        }
+
         }
     }
 }
